@@ -1,150 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="UTF-8" />
- <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
- <title>Jarin Noshin Portfolio</title>
- <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jarin Noshin Portfolio</title>
+<style>
  body {
-   font-family: 'Raleway', sans-serif;
-   margin: 0;
-   scroll-behavior: smooth;
-   background-color: #f4f4f4;
+ font-family: 'Raleway', sans-serif;
+ margin: 0;
+ scroll-behavior: smooth;
+ background-color: #f4f4f4;
  }
  header {
-   background-color: #333;
-   color: white;
-   padding: 1em;
-   text-align: center;
-   position: sticky;
-   top: 0;
-   z-index: 1000;
+ background-color: #333;
+ color: white;
+ padding: 1em;
+ text-align: center;
+ position: sticky;
+ top: 0;
+ z-index: 1000;
  }
  nav a {
-   color: white;
-   margin: 0 15px;
-   text-decoration: none;
-   font-weight: bold;
+ color: white;
+ margin: 0 15px;
+ text-decoration: none;
+ font-weight: bold;
  }
  section {
-   padding: 20px 20px;
-   max-width: 900px;
-   margin: auto;
+ padding: 20px 20px;
+ max-width: 900px;
+ margin: auto;
  }
  h2 {
-   border-bottom: 2px solid #ccc;
-   padding-bottom: 10px;
-   margin-top: 60px;
+ border-bottom: 2px solid #ccc;
+ padding-bottom: 10px;
+ margin-top: 60px;
  }
  .icons a {
-   display: inline-block;
-   margin: 5px 0;
-   text-decoration: none;
+ display: inline-block;
+ margin: 5px 0;
+ text-decoration: none;
  }
  .skills-box {
-   padding: 15px;
-   margin: 10px 0;
-   border-radius: 8px;
-   color: #333;
+ padding: 15px;
+ margin: 10px 0;
+ border-radius: 8px;
+ color: #333;
  }
- .t-color: #B59E7D; }
- .mountain { background-color: #AAA396; }
+ .tobacco { background-color: #B59E7D; }
+ .mountain { background-color #AAA396; }
  .sand { background-color: #CEC1A8; }
  .vanilla { background-color: #F1EADA; }
  footer {
-   text-align: center;
-   padding: 20px;
-   background-color: #f4f4f4;
-   font-size: 0.9em;
+ text-align: center;
+ padding: 20px;
+ background-color: #f4f4f4;
+ font-size: 0.9em;
  }
- </style>
+.skills-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 20px;
+}
+</style>
+<style>
+body {
+ font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+.sidebar {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 200px;
+ height: 100%;
+ background-color: #f8f9fa;
+ padding-top: 20px;
+ box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+.sidebar a {
+ display: block;
+ color: black;
+ padding: 10px 15px;
+ text-decoration: none;
+}
+.sidebar a:hover {
+ background-color: #ddd;
+}
+.content {
+ margin-left: 220px;
+ padding: 20px;
+}
+section {
+ padding-top: 60px;
+ margin-top: -60px;
+}
+.skills-grid {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 20px;
+}
+</style>
 </head>
 <body>
+<div class="sidebar">
+  <a href="#about">About me</a>
+  <a href="#portfolio">Portfolio highlights</a>
+  <a href="#skills">Skills & expertise</a>
+  <a href="#contact">Contact</a>
+</div>
 <header>
- <h1>Hi, this is Jarin Noshin.</h1>
- <nav>
-   <a href="#about">About me</a>
-   <a href="#portfolio">Portfolio highlights</a>
-   <a href="#skills">Skills & expertise</a>
-   <a href="#contact">Contact</a>
- </nav>
+<h1>Hi, this is Jarin Noshin.</h1>
 </header>
+
 <section id="about">
- <h2>About me</h2>
- <p>Welcome to my website.<br>
+<h2>About me</h2>
+<p>Welcome to my website.<br/>
  I'm a marketing strategist with years of experience leading mission-driven communications across financial services, tech, and social impact sectors. Currently at BlackRock, I specialize in AI-powered digital engagement, blending analytics and storytelling to create data-informed narratives that connect with diverse audiences.</p>
- <div class="icons">
- 📄 <a href="https://docs.google.com/document/d/19H7EBRtU5s0mBRQw_K8qbzjtJSc5nyX_/edit?usp=sharing&ouid=109937790487810284171&rtpof=true&sd=true" target="_blank">Resume</a><br>
- 🔗 <a href="https://www.ibtimes.com/reporters/jarin-noshin" target="_blank">IBTimes Column</a><br>
- 📜 <a href="https://drive.google.com/file/d/1qKL_V3LWaIcd4XhPVdDTbMtjc38RJ5mO/view" target="_blank">World Bank Youth Summit Certificate</a><br>
+<div class="icons">
+ 📄 <a href="https://docs.google.com/document/d/19H7EBRtU5s0mBRQw_K8qbzjtJSc5nyX_/edit?usp=sharing&ouid=109937790487810284171&rtpof=true&sd=true" target="_blank">Resume</a><br/>
+ 🔗 <a href="https://www.ibtimes.com/reporters/jarin-noshin" target="_blank">IBTimes Column</a><br/>
+ 📜 <a href="https://drive.google.com/file/d/1qKL_V3LWaIcd4XhPVdDTbMtjc38RJ5mO/view" target="_blank">World Bank Youth Summit Certificate</a><br/>
  🎓 <a href="https://www.credly.com/badges/8149cb7f-9b11-4ef5-bb3e-9d8e9b962e0a/linked_in?t=sumd92" target="_blank">IBM AI Fundamentals Badge</a>
- </div>
+</div>
 </section>
+
 <section id="portfolio">
- <h2>Portfolio highlights</h2>
- <p>Let me walk you through some of the work I’m most proud of—projects that blend strategy, storytelling, and social impact:</p>
- <p>🔍 AI Tagging Initiative for Morgan Stanley<br>
- Led a tagging initiative using an advanced AI platform to collect and leverage first-party data from website visitors, covering 1400+ attributes.<br>
- 🔗 <a href="https://www.resonate.com/blog/resonate-tags-truly-understand-site-visitors/" target="_blank">View Project</a>
- </p>
- <p>🌱 HSBC – Sustainability Linked Loan<br>
- Launched the first Sustainability Linked Loan in Bangladesh, helping the country take an important step towards a more sustainable future.<br>
- 🔗 <a href="https://www.business.hsbc.com.bd/en-gb/campaigns/sustainability" target="_blank">View Project</a>
- </p>
- <p>👩‍💼 Prime Bank Ltd – Neera<br>
- Conceived, scoped, managed, and executed Neera, the first women banking product in Bangladesh, targeting unbanked women.<br>
- 🔗 <a href="https://www.smefinanceforum.org/post/neera-a-prime-bank-initiative-for-women" target="_blank">View Project</a>
- </p>
- <p>✈️ GoZayaan<br>
- Worked as a consultant for GoZayaan, securing a $1 million investment from BRAC Osiris Impact Venture.<br>
- 🔗 <a href="https://www.dhakatribune.com/business/188495/online-travel-platform-go-zayaan-receives-foreign" target="_blank">View Project</a>
- </p>
- <p>🖥️ Microsoft “Use Genuine” Campaign<br>
- Planned and executed Microsoft’s first campaign in Bangladesh, promoting the benefits of using Genuine Office 360.<br>
- 🔗 <em>View Campaign</em>
- </p>
- <p>🏆 Hult Prize 2013 – Global Finalist<br>
- Runner-up at the 4th Annual Hult Prize 2013 Dubai Regional Final, presenting a solution to global food insecurity.<br>
- 📂 <strong>See the full portfolio</strong>
- </p>
+<h2>Portfolio highlights</h2>
+<p>Let me walk you through some of the work I’m most proud of—projects that blend strategy, storytelling, and social impact:</p>
+
+<p>🔍 <strong>AI Tagging Initiative for Morgan Stanley</strong><br/>
+Led a tagging initiative using an advanced AI platform to collect and leverage first-party data from website visitors, covering 1400+ attributes.<br/>
+🔗 <a href="https://www.resonate.com/blog/resonate-tags-truly-understand-site-visitors/" target="_blank">View Project</a></p>
+
+<p>🌱 <strong>HSBC – Sustainability Linked Loan</strong><br/>
+Launched the first Sustainability Linked Loan in Bangladesh, helping the country take an important step towards a more sustainable future.<br/>
+🔗 <a href="https://www.business.hsbc.com.bd/en-gb/campaigns/sustainability" target="_blank">View Project</a></p>
+
+<p>👩‍💼 <strong>Prime Bank Ltd – Neera</strong><br/>
+Conceived, scoped, managed, and executed Neera, the first women banking product in Bangladesh, targeting unbanked women.<br/>
+🔗 <a href="https://www.smefinanceforum.org/post/neera-a-prime-bank-initiative-for-women" target="_blank">View Project</a></p>
+
+<p>✈️ <strong>GoZayaan</strong><br/>
+Worked as a consultant for GoZayaan, securing a $1 million investment from BRAC Osiris Impact Venture.<br/>
+🔗 <a href="https://www.dhakatribune.com/business/188495/online-travel-platform-go-zayaan-receives-foreign" target="_blank">View Project</a></p>
+
+<p>🖥️ <strong>Microsoft “Use Genuine” Campaign</strong><br/>
+Planned and executed Microsoft’s first campaign in Bangladesh, promoting the benefits of using Genuine Office 360.<br/>
+🔗 <a href="https://www.adsoftheworld.com/campaigns/don-t-steal-get-genuine" target="_blank">View Campaign</a></p>
+
+<p>🏆 <strong>Hult Prize 2013 – Global Finalist</strong><br/>
+Runner-up at the 4th Annual Hult Prize 2013 Dubai Regional Final, presenting a solution to global food insecurity.</p>
+
+<br/>
+<p>📂 <strong><a href="https://docs.google.com/presentation/d/1lOX9m6OxFJTHmrZXA0VFsMhYldzFxfpf/edit?usp=sharing&ouid=109937790487810284171&rtpof=true&sd=true" target="_blank">See the full portfolio</a></strong></p>
 </section>
+
 <section id="skills">
- <h2>Skills & expertise</h2>
- <div class="skills-box tobacco">
-   <strong>Digital Marketing</strong><br>
-   Google Analytics 360<br>
-   Meta Business Manager
- </div>
- <div class="skills-box mountain">
-   <strong>Project & Content Management</strong><br>
-   Asana<br>
-   Airtable
- </div>
- <div class="skills-box sand">
-   <strong>Data Analytics & Visualization</strong><br>
-   SQL<br>
-   Python<br>
-   Tableau<br>
-   PowerBI<br>
-   RapidMiner
- </div>
- <div class="skills-box vanilla">
-   <strong>Marketing Automation</strong><br>
-   Salesforce<br>
-   Eloqua<br>
-   Qualtrics<br>
-   Stensul<br>
-   Microsoft Dynamics<br>
-   Microsoft Copilot
- </div>
+<h2>Skills & expertise</h2>
+<div class="skills-grid">
+<div class="skills-box tobacco">
+<strong>Digital Marketing</strong><br/>
+Google Analytics 360<br/>
+Meta Business Manager
+</div>
+<div class="skills-box mountain">
+<strong>Project & Content Management</strong><br/>
+Asana<br/>
+Airtable
+</div>
+<div class="skills-box sand">
+<strong>Data Analytics & Visualization</strong><br/>
+SQL<br/>
+Python<br/>
+Tableau<br/>
+PowerBI<br/>
+RapidMiner
+</div>
+<div class="skills-box vanilla">
+<strong>Marketing Automation</strong><br/>
+Salesforce<br/>
+Eloqua<br/>
+Qualtrics<br/>
+Stensul<br/>
+Microsoft Dynamics<br/>
+Microsoft Copilot
+</div>
+</div>
 </section>
+
 <section id="contact">
- <h2>Contact</h2>
- <p>📧 jtnoshin@gmail.com</p>
- <p>🔗 <a href="https://www.linkedin.com/in/jarin-noshin" target="_blank">LinkedIn</a></p>
+<h2>Contact</h2>
+<p>📧 jtnoshin@gmail.com</p>
+<p>🔗 <a href="https://www.linkedin.com/in/jarintasnimnoshin/" target="_blank">LinkedIn</a></p>
 </section>
-<footer>
- © 2025 Jarin Noshin. All rights reserved.
-</footer>
 </body>
 </html>
