@@ -161,7 +161,71 @@
       color: #888;
     }
 
-    /* Popup modal styles */
+    .contact-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .contact-btn {
+      background-color: #5e4b3c;
+      border: none;
+      border-radius: 50%;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 14px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      color: white;
+      text-decoration: none;
+    }
+
+    .contact-btn:hover {
+      background-color: #9e7b63;
+    }
+
+    .contact-btn svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    .floating-btn {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background-color: #5e4b3c;
+      color: white;
+      border: none;
+      border-radius: 25px;
+      padding: 12px 20px;
+      font-size: 0.9rem;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      z-index: 1001;
+      transition: background-color 0.3s ease;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: floatIn 0.6s ease-out 1.2s forwards;
+    }
+
+    .floating-btn:hover {
+      background-color: #9e7b63;
+    }
+
+    @keyframes floatIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
     .popup-form {
       display: none;
       position: fixed;
@@ -205,85 +269,6 @@
 
     .close-btn:hover {
       color: #000;
-    }
-
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
-
-    /* Floating Button */
-    .floating-btn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background-color: #5e4b3c;
-      color: white;
-      border: none;
-      border-radius: 25px;
-      padding: 12px 20px;
-      font-size: 0.9rem;
-      font-family: 'Inter', sans-serif;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      z-index: 1001;
-      transition: background-color 0.3s ease;
-
-      /* Entrance animation */
-      opacity: 0;
-      transform: translateY(30px);
-      animation: floatIn 0.6s ease-out 1.2s forwards;
-    }
-
-    .floating-btn:hover {
-      background-color: #9e7b63;
-    }
-
-    @keyframes floatIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Contact buttons container */
-    #contact .contact-buttons {
-      display: flex;
-      gap: 20px;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    /* Contact buttons style */
-    .contact-btn {
-      background-color: #5e4b3c;
-      border: none;
-      border-radius: 50%;
-      width: 56px;
-      height: 56px;
-      display: flex;
-      align-items: center;
-      padding-left: 8px; /* Added padding-left for left icon alignment */
-      justify-content: flex-start; /* left align icon */
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      color: white;
-      font-size: 24px;
-      text-decoration: none;
-      box-sizing: border-box;
-    }
-
-    .contact-btn:hover {
-      background-color: #9e7b63;
-    }
-
-    /* Icon styles for inline SVG */
-    .contact-btn svg {
-      width: 24px;
-      height: 24px;
-      fill: currentColor;
-      margin-right: 8px;
-      flex-shrink: 0;
     }
 
     @media (max-width: 768px) {
@@ -336,6 +321,7 @@
   <h2>Portfolio highlights</h2>
   <p>Selected projects blending strategy, tech, and impact:</p>
   <div class="portfolio-grid">
+    <!-- Cards here -->
     <div class="portfolio-card">
       <h3>🔍 AI Tagging – Morgan Stanley</h3>
       <p>Used AI to leverage 1400+ user data attributes for digital personalization.</p>
@@ -366,47 +352,26 @@
       <p>Global finalist for a solution tackling food insecurity at Hult Prize Dubai.</p>
     </div>
   </div>
-  <a class="btn" href="https://docs.google.com/presentation/d/1lOX9m6OxFJTHmrZXA0VFsMhYldzFxfpf/edit?usp=sharing" target="_blank" style="margin-top: 30px;">See full portfolio</a>
 </section>
 
 <section id="skills">
   <h2>Skills & expertise</h2>
   <div class="skills-grid">
-    <div class="skills-box">
-      <strong>Digital Marketing</strong>
-      Google Analytics 360<br/>Meta Business Manager
-    </div>
-    <div class="skills-box">
-      <strong>Project & Content Management</strong>
-      Asana<br/>Airtable
-    </div>
-    <div class="skills-box">
-      <strong>Data & Analytics</strong>
-      SQL, Python<br/>Tableau, Power BI, RapidMiner
-    </div>
-    <div class="skills-box">
-      <strong>Marketing Automation</strong>
-      Salesforce, Eloqua, Qualtrics<br/>Stensul, MS Dynamics, Copilot
-    </div>
+    <div class="skills-box"><strong>Digital Marketing</strong>Google Analytics 360<br/>Meta Business Manager</div>
+    <div class="skills-box"><strong>Project & Content Management</strong>Asana<br/>Airtable</div>
+    <div class="skills-box"><strong>Data & Analytics</strong>SQL, Python<br/>Tableau, Power BI, RapidMiner</div>
+    <div class="skills-box"><strong>Marketing Automation</strong>Salesforce, Eloqua, Qualtrics<br/>Stensul, MS Dynamics, Copilot</div>
   </div>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
   <div class="contact-buttons">
-    <a href="mailto:jtnoshin@gmail.com" class="contact-btn" aria-label="Email Jarin Noshin" title="Email">
-      <!-- Updated Email Icon (Inbox style) -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M19 3H5a2 2 0 00-2 2v12a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-7 9l-4-4h8l-4 4zm7 4H5v-1h14v1z"/>
-      </svg>
-      Email
+    <a href="mailto:jtnoshin@gmail.com" class="contact-btn" title="Email">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
     </a>
-    <a href="https://www.linkedin.com/in/jarintasnimnoshin/" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="LinkedIn Profile" title="LinkedIn">
-      <!-- LinkedIn Icon -->
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.29c-.967 0-1.75-.79-1.75-1.76 0-.969.783-1.76 1.75-1.76s1.75.791 1.75 1.76c0 .97-.783 1.76-1.75 1.76zm13.5 10.29h-3v-4.5c0-1.07-.02-2.44-1.49-2.44-1.49 0-1.72 1.16-1.72 2.36v4.58h-3v-9h2.88v1.23h.04c.4-.75 1.37-1.54 2.82-1.54 3.02 0 3.58 1.99 3.58 4.58v4.73z"/>
-      </svg>
-      LinkedIn
+    <a href="https://www.linkedin.com/in/jarintasnimnoshin/" target="_blank" class="contact-btn" title="LinkedIn">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5 0h4.7v2.17h.07c.66-1.25 2.27-2.57 4.68-2.57 5.01 0 5.93 3.3 5.93 7.58V24H18v-7.44c0-1.78-.03-4.08-2.49-4.08-2.5 0-2.88 1.95-2.88 3.96V24h-5V8z"/></svg>
     </a>
   </div>
 </section>
@@ -430,11 +395,9 @@
   function openForm() {
     document.getElementById("popupForm").style.display = "block";
   }
-
   function closeForm() {
     document.getElementById("popupForm").style.display = "none";
   }
-
   window.onclick = function(event) {
     const popup = document.getElementById("popupForm");
     if (event.target == popup) {
