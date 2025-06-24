@@ -8,12 +8,14 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
       margin: 0;
       scroll-behavior: smooth;
       background-color: #f4f4f4;
     }
     header {
-      background-color: #333;
+      background: linear-gradient(to right, #333, #5c5c5c);
       color: white;
       padding: 1em;
       text-align: center;
@@ -22,6 +24,7 @@
       z-index: 1000;
       margin-left: 200px;
       width: calc(100% - 200px);
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
     nav a {
       color: white;
@@ -33,6 +36,9 @@
       padding: 20px 20px;
       max-width: 900px;
       margin: auto;
+      padding-top: 60px;
+      margin-top: -60px;
+      margin-bottom: 60px;
     }
     h2 {
       border-bottom: 2px solid #ccc;
@@ -80,19 +86,35 @@
       color: black;
       padding: 10px 15px;
       text-decoration: none;
+      font-weight: 500;
     }
-    .sidebar a:hover {
-      background-color: #ddd;
+    .sidebar a:hover, .sidebar a.active {
+      background-color: #B59E7D;
+      color: white;
     }
     .content {
       margin-left: 220px;
       padding: 20px;
     }
-    section {
-      padding-top: 60px;
-      margin-top: -60px;
+    a {
+      color: #333;
     }
-
+    a:hover {
+      color: #B59E7D;
+      text-decoration: underline;
+    }
+    .btn {
+      display: inline-block;
+      background-color: #B59E7D;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .btn:hover {
+      background-color: #a18665;
+    }
     @media (max-width: 768px) {
       .sidebar {
         position: relative;
@@ -173,8 +195,7 @@
   <p>🏆 <strong>Hult Prize 2013 – Global Finalist</strong><br/>
   Runner-up at the 4th Annual Hult Prize 2013 Dubai Regional Final, presenting a solution to global food insecurity.</p>
 
-  <br/>
-  <p>📂 <strong><a href="https://docs.google.com/presentation/d/1lOX9m6OxFJTHmrZXA0VFsMhYldzFxfpf/edit?usp=sharing" target="_blank">See the full portfolio</a></strong></p>
+  <a class="btn" href="https://docs.google.com/presentation/d/1lOX9m6OxFJTHmrZXA0VFsMhYldzFxfpf/edit?usp=sharing" target="_blank">See the full portfolio</a>
 </section>
 
 <section id="skills">
@@ -209,6 +230,7 @@
     </div>
   </div>
 </section>
+
 <section id="contact">
   <h2>Contact</h2>
   <p>📧 jtnoshin@gmail.com</p>
