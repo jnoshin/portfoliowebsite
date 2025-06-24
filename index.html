@@ -6,7 +6,6 @@
   <title>Jarin Noshin Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
-    /* Reset and base styles */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -15,19 +14,19 @@
 
     body {
       font-family: 'Inter', sans-serif;
-      background-color: #fafafa;
-      color: #222;
+      background-color: #fdf6f0;
+      color: #333;
       line-height: 1.6;
       scroll-behavior: smooth;
     }
 
     header {
-      background-color: #fff;
-      color: #222;
+      background-color: #fdf6f0;
+      color: #5e4b3c;
       padding: 1.2em 1em;
       text-align: center;
       font-weight: 600;
-      border-bottom: 1px solid #eee;
+      border-bottom: 1px solid #e5d8ca;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -41,21 +40,21 @@
       left: 0;
       width: 200px;
       height: 100%;
-      background-color: #fdfdfd;
+      background-color: #e5d8ca;
       padding-top: 30px;
-      border-right: 1px solid #eee;
+      border-right: 1px solid #ddd;
     }
 
     .sidebar a {
       display: block;
-      color: #333;
+      color: #5e4b3c;
       padding: 12px 20px;
       text-decoration: none;
       font-weight: 500;
     }
 
     .sidebar a:hover {
-      background-color: #f0f0f0;
+      background-color: #f0e8df;
     }
 
     section {
@@ -70,34 +69,28 @@
       font-size: 1.6rem;
       font-weight: 600;
       margin-bottom: 20px;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #ccc;
       padding-bottom: 8px;
+      color: #5e4b3c;
     }
 
-    .btn {
-      background-color: #333;
+    .btn,
+    .about-links a {
+      background-color: #5e4b3c;
       color: #fff;
       padding: 8px 16px;
-      border-radius: 4px;
+      border-radius: 20px;
       text-decoration: none;
       font-size: 0.9rem;
       display: inline-block;
       transition: background 0.2s;
     }
 
-    .btn:hover {
-      background-color: #555;
+    .btn:hover,
+    .about-links a:hover {
+      background-color: #9e7b63;
     }
 
-    .icons a {
-      display: block;
-      margin: 5px 0;
-      color: #333;
-      text-decoration: none;
-      font-size: 0.95rem;
-    }
-
-    /* Portfolio Section (No images) */
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -107,7 +100,7 @@
 
     .portfolio-card {
       background-color: #fff;
-      border: 1px solid #e0e0e0;
+      border: 1px solid #e5d8ca;
       border-radius: 8px;
       padding: 20px;
       transition: border-color 0.2s ease, transform 0.2s ease;
@@ -122,6 +115,7 @@
       font-size: 1.1rem;
       font-weight: 600;
       margin-bottom: 8px;
+      color: #5e4b3c;
     }
 
     .portfolio-card p {
@@ -148,6 +142,14 @@
       display: block;
       font-weight: 600;
       margin-bottom: 8px;
+      color: #5e4b3c;
+    }
+
+    .about-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
     }
 
     footer {
@@ -191,17 +193,18 @@
 <header>
   <h1>Hi, I'm Jarin Noshin</h1>
 </header>
+
 <section id="about">
   <h2>About me</h2>
   <p>Marketing strategist with cross-sector experience across finance, tech, and social impact. Currently at BlackRock, I specialize in AI-powered digital engagement, using analytics and storytelling to reach diverse audiences.</p>
-  
   <div class="about-links">
     <a href="https://docs.google.com/document/d/19H7EBRtU5s0mBRQw_K8qbzjtJSc5nyX_/edit?usp=sharing" target="_blank">📄 Resume</a>
     <a href="https://www.ibtimes.com/reporters/jarin-noshin" target="_blank">🔗 IBTimes Column</a>
-    <a href="https://drive.google.com/file/d/1qKL_V3LWaIcd4XhPVdDTbMtjc38RJ5mO/view" target="_blank">📜 World Bank Youth Summit Certificate</a>
-    <a href="https://www.credly.com/badges/8149cb7f-9b11-4ef5-bb3e-9d8e9b962e0a/linked_in?t=sumd92" target="_blank">🎓 IBM AI Fundamentals Badge</a>
+    <a href="https://drive.google.com/file/d/1qKL_V3LWaIcd4XhPVdDTbMtjc38RJ5mO/view" target="_blank">📜 World Bank Certificate</a>
+    <a href="https://www.credly.com/badges/8149cb7f-9b11-4ef5-bb3e-9d8e9b962e0a/linked_in?t=sumd92" target="_blank">🎓 IBM AI Badge</a>
   </div>
 </section>
+
 <section id="portfolio">
   <h2>Portfolio highlights</h2>
   <p>Selected projects blending strategy, tech, and impact:</p>
