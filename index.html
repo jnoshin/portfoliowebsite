@@ -6,18 +6,28 @@
   <title>Jarin Noshin Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
   <style>
+    /* Reset and base styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'Inter', sans-serif;
-      margin: 0;
-      background-color: #f4f4f4;
+      background-color: #fafafa;
+      color: #222;
+      line-height: 1.6;
       scroll-behavior: smooth;
     }
 
     header {
-      background-color: #333;
-      color: white;
-      padding: 1em;
+      background-color: #fff;
+      color: #222;
+      padding: 1.2em 1em;
       text-align: center;
+      font-weight: 600;
+      border-bottom: 1px solid #eee;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -31,118 +41,120 @@
       left: 0;
       width: 200px;
       height: 100%;
-      background-color: #f8f9fa;
-      padding-top: 20px;
-      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+      background-color: #fdfdfd;
+      padding-top: 30px;
+      border-right: 1px solid #eee;
     }
 
     .sidebar a {
       display: block;
-      color: black;
-      padding: 10px 15px;
+      color: #333;
+      padding: 12px 20px;
       text-decoration: none;
+      font-weight: 500;
     }
 
     .sidebar a:hover {
-      background-color: #ddd;
+      background-color: #f0f0f0;
     }
 
     section {
-      padding: 20px;
-      max-width: 1000px;
+      padding: 40px 20px;
+      max-width: 960px;
       margin: auto;
-      padding-top: 60px;
-      margin-top: -60px;
+      padding-top: 80px;
+      margin-top: -80px;
     }
 
     h2 {
-      border-bottom: 2px solid #ccc;
-      padding-bottom: 10px;
-      margin-top: 60px;
+      font-size: 1.6rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 8px;
     }
 
     .btn {
-      display: inline-block;
-      background-color: #B59E7D;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 5px;
+      background-color: #333;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 4px;
       text-decoration: none;
-      margin-top: 10px;
+      font-size: 0.9rem;
+      display: inline-block;
+      transition: background 0.2s;
     }
 
     .btn:hover {
-      background-color: #a18665;
+      background-color: #555;
     }
 
     .icons a {
-      display: inline-block;
+      display: block;
       margin: 5px 0;
+      color: #333;
       text-decoration: none;
+      font-size: 0.95rem;
     }
 
-    /* Portfolio card styling */
+    /* Portfolio Section (No images) */
     .portfolio-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 20px;
       margin-top: 20px;
     }
 
     .portfolio-card {
       background-color: #fff;
-      border-radius: 10px;
-      padding: 15px;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.08);
-      display: flex;
-      flex-direction: column;
-      transition: transform 0.2s ease;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 20px;
+      transition: border-color 0.2s ease, transform 0.2s ease;
     }
 
     .portfolio-card:hover {
-      transform: translateY(-5px);
-    }
-
-    .portfolio-card img {
-      width: 100%;
-      height: auto;
-      border-radius: 8px;
-      margin-bottom: 10px;
-      object-fit: cover;
+      border-color: #ccc;
+      transform: translateY(-2px);
     }
 
     .portfolio-card h3 {
-      margin-top: 0;
-      font-size: 1.1em;
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 8px;
     }
 
     .portfolio-card p {
-      flex-grow: 1;
+      font-size: 0.95rem;
+      color: #444;
+      margin-bottom: 10px;
     }
-
-    .skills-box {
-      padding: 15px;
-      margin: 10px 0;
-      border-radius: 8px;
-      color: #333;
-    }
-
-    .tobacco { background-color: #B59E7D; }
-    .mountain { background-color: #AAA396; }
-    .sand { background-color: #CEC1A8; }
-    .vanilla { background-color: #F1EADA; }
 
     .skills-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .skills-box {
+      background-color: #fff;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+    }
+
+    .skills-box strong {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
     }
 
     footer {
       text-align: center;
-      padding: 20px;
-      background-color: #f4f4f4;
-      font-size: 0.9em;
+      font-size: 0.85rem;
+      padding: 40px 20px;
+      color: #888;
     }
 
     @media (max-width: 768px) {
@@ -150,16 +162,19 @@
         position: relative;
         width: 100%;
         height: auto;
+        border-right: none;
+        border-bottom: 1px solid #eee;
         text-align: center;
+      }
+
+      .sidebar a {
+        display: inline-block;
+        padding: 12px 15px;
       }
 
       header {
         margin-left: 0;
         width: 100%;
-      }
-
-      .skills-grid {
-        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -168,115 +183,94 @@
 
 <div class="sidebar">
   <a href="#about">About me</a>
-  <a href="#portfolio">Portfolio highlights</a>
-  <a href="#skills">Skills & expertise</a>
+  <a href="#portfolio">Portfolio</a>
+  <a href="#skills">Skills</a>
   <a href="#contact">Contact</a>
 </div>
 
 <header>
-  <h1>Hi, this is Jarin Noshin.</h1>
+  <h1>Hi, I'm Jarin Noshin</h1>
 </header>
 
 <section id="about">
   <h2>About me</h2>
-  <p>I'm a marketing strategist with experience across financial services, tech, and social impact. At BlackRock, I specialize in AI-powered digital engagement, blending analytics with storytelling to reach diverse audiences.</p>
+  <p>Marketing strategist with cross-sector experience across finance, tech, and social impact. Currently at BlackRock, I specialize in AI-powered digital engagement, using analytics and storytelling to reach diverse audiences.</p>
   <div class="icons">
-    📄 <a href="https://docs.google.com/document/d/19H7EBRtU5s0mBRQw_K8qbzjtJSc5nyX_/edit?usp=sharing" target="_blank">Resume</a><br/>
-    🔗 <a href="https://www.ibtimes.com/reporters/jarin-noshin" target="_blank">IBTimes Column</a><br/>
-    📜 <a href="https://drive.google.com/file/d/1qKL_V3LWaIcd4XhPVdDTbMtjc38RJ5mO/view" target="_blank">World Bank Youth Summit Certificate</a><br/>
+    📄 <a href="https://docs.google.com/document/d/19H7EBRtU5s0mBRQw_K8qbzjtJSc5nyX_/edit?usp=sharing" target="_blank">Resume</a>
+    🔗 <a href="https://www.ibtimes.com/reporters/jarin-noshin" target="_blank">IBTimes Column</a>
+    📜 <a href="https://drive.google.com/file/d/1qKL_V3LWaIcd4XhPVdDTbMtjc38RJ5mO/view" target="_blank">World Bank Youth Summit Certificate</a>
     🎓 <a href="https://www.credly.com/badges/8149cb7f-9b11-4ef5-bb3e-9d8e9b962e0a/linked_in?t=sumd92" target="_blank">IBM AI Fundamentals Badge</a>
   </div>
 </section>
 
 <section id="portfolio">
   <h2>Portfolio highlights</h2>
-  <p>Projects that blend AI, strategy, and social impact:</p>
-
+  <p>Selected projects blending strategy, tech, and impact:</p>
   <div class="portfolio-grid">
-
     <div class="portfolio-card">
-      <img src="https://resonate.com/wp-content/uploads/2020/10/Resonate-Tags.jpg" alt="AI Tagging - Morgan Stanley">
       <h3>🔍 AI Tagging – Morgan Stanley</h3>
-      <p>Used AI to capture 1400+ first-party data points on site visitors.</p>
+      <p>Used AI to leverage 1400+ user data attributes for digital personalization.</p>
       <a href="https://www.resonate.com/blog/resonate-tags-truly-understand-site-visitors/" target="_blank" class="btn">View Project</a>
     </div>
-
     <div class="portfolio-card">
-      <img src="https://www.business.hsbc.com.bd/etc.clientlibs/settings/wcm/designs/hsbc/business/images/logos/logo.png" alt="HSBC Sustainability Loan">
       <h3>🌱 Sustainability Loan – HSBC</h3>
-      <p>Launched the first Sustainability Linked Loan in Bangladesh.</p>
+      <p>Launched Bangladesh’s first Sustainability Linked Loan to support ESG finance.</p>
       <a href="https://www.business.hsbc.com.bd/en-gb/campaigns/sustainability" target="_blank" class="btn">View Project</a>
     </div>
-
     <div class="portfolio-card">
-      <img src="https://www.smefinanceforum.org/sites/default/files/styles/blog_detail/public/blog-images/Neera%20Prime%20Bank.jpg" alt="Neera by Prime Bank">
       <h3>👩‍💼 Neera – Prime Bank</h3>
-      <p>Created Bangladesh's first women-focused banking product.</p>
+      <p>Created women-centric banking product to increase financial inclusion.</p>
       <a href="https://www.smefinanceforum.org/post/neera-a-prime-bank-initiative-for-women" target="_blank" class="btn">View Project</a>
     </div>
-
     <div class="portfolio-card">
-      <img src="https://cdn.dhakatribune.com/uploads/2019/10/gz2.jpg" alt="GoZayaan Investment">
       <h3>✈️ GoZayaan Investment</h3>
-      <p>Helped secure $1M from BRAC Osiris Impact Venture for GoZayaan.</p>
+      <p>Secured $1M funding from BRAC Osiris Impact Venture as a consultant.</p>
       <a href="https://www.dhakatribune.com/business/188495/online-travel-platform-go-zayaan-receives-foreign" target="_blank" class="btn">View Project</a>
     </div>
-
     <div class="portfolio-card">
-      <img src="https://www.adsoftheworld.com/media/campaign/don_t_steal_get_genuine_1.jpg" alt="Microsoft Campaign">
       <h3>🖥️ Microsoft “Use Genuine”</h3>
-      <p>Ran Microsoft’s first official campaign in Bangladesh.</p>
+      <p>Led Microsoft’s first official campaign in Bangladesh for Office 360 adoption.</p>
       <a href="https://www.adsoftheworld.com/campaigns/don-t-steal-get-genuine" target="_blank" class="btn">View Campaign</a>
     </div>
-
     <div class="portfolio-card">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4a/Hult_Prize_Logo.png" alt="Hult Prize Finalist">
       <h3>🏆 Hult Prize Finalist</h3>
-      <p>Global finalist for a solution tackling global food insecurity.</p>
+      <p>Global finalist for a solution tackling food insecurity at Hult Prize Dubai.</p>
     </div>
   </div>
-
   <a class="btn" href="https://docs.google.com/presentation/d/1lOX9m6OxFJTHmrZXA0VFsMhYldzFxfpf/edit?usp=sharing" target="_blank" style="margin-top: 30px;">See full portfolio</a>
 </section>
 
 <section id="skills">
   <h2>Skills & expertise</h2>
   <div class="skills-grid">
-    <div class="skills-box tobacco">
-      <strong>Digital Marketing</strong><br/>
-      Google Analytics 360<br/>
-      Meta Business Manager
+    <div class="skills-box">
+      <strong>Digital Marketing</strong>
+      Google Analytics 360<br/>Meta Business Manager
     </div>
-    <div class="skills-box mountain">
-      <strong>Project & Content Management</strong><br/>
-      Asana<br/>
-      Airtable
+    <div class="skills-box">
+      <strong>Project & Content Management</strong>
+      Asana<br/>Airtable
     </div>
-    <div class="skills-box sand">
-      <strong>Data Analytics & Visualization</strong><br/>
-      SQL<br/>
-      Python<br/>
-      Tableau<br/>
-      PowerBI<br/>
-      RapidMiner
+    <div class="skills-box">
+      <strong>Data & Analytics</strong>
+      SQL, Python<br/>Tableau, Power BI, RapidMiner
     </div>
-    <div class="skills-box vanilla">
-      <strong>Marketing Automation</strong><br/>
-      Salesforce<br/>
-      Eloqua<br/>
-      Qualtrics<br/>
-      Stensul<br/>
-      Microsoft Dynamics<br/>
-      Microsoft Copilot
+    <div class="skills-box">
+      <strong>Marketing Automation</strong>
+      Salesforce, Eloqua, Qualtrics<br/>Stensul, MS Dynamics, Copilot
     </div>
   </div>
 </section>
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>📧 jtnoshin@gmail.com</p>
-  <p>🔗 <a href="https://www.linkedin.com/in/jarintasnimnoshin/" target="_blank">LinkedIn</a></p>
+  <p>Email: <a href="mailto:jtnoshin@gmail.com">jtnoshin@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/jarintasnimnoshin/" target="_blank">jarintasnimnoshin</a></p>
 </section>
+
+<footer>
+  &copy; 2025 Jarin Noshin. All rights reserved.
+</footer>
 
 </body>
 </html>
