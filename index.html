@@ -227,10 +227,22 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       z-index: 1001;
       transition: background-color 0.3s ease;
+
+      /* Entrance animation */
+      opacity: 0;
+      transform: translateY(30px);
+      animation: floatIn 0.6s ease-out 1.2s forwards;
     }
 
     .floating-btn:hover {
       background-color: #9e7b63;
+    }
+
+    @keyframes floatIn {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     @media (max-width: 768px) {
@@ -283,8 +295,7 @@
   <h2>Portfolio highlights</h2>
   <p>Selected projects blending strategy, tech, and impact:</p>
   <div class="portfolio-grid">
-    <!-- Portfolio cards as before -->
-    <!-- ... -->
+    <!-- Your portfolio cards remain unchanged -->
   </div>
   <a class="btn" href="https://docs.google.com/presentation/d/1lOX9m6OxFJTHmrZXA0VFsMhYldzFxfpf/edit?usp=sharing" target="_blank" style="margin-top: 30px;">See full portfolio</a>
 </section>
@@ -292,8 +303,7 @@
 <section id="skills">
   <h2>Skills & expertise</h2>
   <div class="skills-grid">
-    <!-- Skills boxes as before -->
-    <!-- ... -->
+    <!-- Your skills boxes remain unchanged -->
   </div>
 </section>
 
@@ -301,7 +311,6 @@
   <h2>Contact</h2>
   <p>Email: <a href="mailto:jtnoshin@gmail.com">jtnoshin@gmail.com</a></p>
   <p>LinkedIn: <a href="https://www.linkedin.com/in/jarintasnimnoshin/" target="_blank">jarintasnimnoshin</a></p>
-  <button class="btn" onclick="openForm()">Work with me</button>
 </section>
 
 <footer>
@@ -309,7 +318,7 @@
 </footer>
 
 <!-- Floating Button -->
-<button class="floating-btn" onclick="openForm()">Work with me</button>
+<button class="floating-btn" onclick="openForm()">Let’s connect</button>
 
 <!-- Popup Modal -->
 <div id="popupForm" class="popup-form">
@@ -319,7 +328,6 @@
   </div>
 </div>
 
-<!-- JS -->
 <script>
   function openForm() {
     document.getElementById("popupForm").style.display = "block";
