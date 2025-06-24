@@ -85,6 +85,7 @@
       display: inline-block;
       transition: background 0.2s;
       cursor: pointer;
+      border: none;
     }
 
     .btn:hover,
@@ -245,6 +246,42 @@
       }
     }
 
+    /* Contact buttons container */
+    #contact .contact-buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    /* Contact buttons style */
+    .contact-btn {
+      background-color: #5e4b3c;
+      border: none;
+      border-radius: 50%;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    .contact-btn:hover {
+      background-color: #9e7b63;
+    }
+
+    /* Icon styles for inline SVG */
+    .contact-btn svg {
+      width: 24px;
+      height: 24px;
+      fill: currentColor;
+    }
+
     @media (max-width: 768px) {
       .sidebar {
         position: relative;
@@ -352,8 +389,20 @@
 
 <section id="contact">
   <h2>Contact</h2>
-  <p>Email: <a href="mailto:jtnoshin@gmail.com">jtnoshin@gmail.com</a></p>
-  <p>LinkedIn: <a href="https://www.linkedin.com/in/jarintasnimnoshin/" target="_blank">jarintasnimnoshin</a></p>
+  <div class="contact-buttons">
+    <a href="mailto:jtnoshin@gmail.com" class="contact-btn" aria-label="Email Jarin Noshin" title="Email">
+      <!-- Email Icon (Envelope) -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M2 6a2 2 0 012-2h16a2 2 0 012 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6zm2-.5l8 5 8-5V6l-8 5-8-5v-.5z"/>
+      </svg>
+    </a>
+    <a href="https://www.linkedin.com/in/jarintasnimnoshin/" target="_blank" rel="noopener noreferrer" class="contact-btn" aria-label="LinkedIn Profile" title="LinkedIn">
+      <!-- LinkedIn Icon -->
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.762 2.239 5 5 5h14c2.762 0 5-2.238 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.29c-.967 0-1.75-.79-1.75-1.76 0-.969.783-1.76 1.75-1.76s1.75.791 1.75 1.76c0 .97-.783 1.76-1.75 1.76zm13.5 10.29h-3v-4.5c0-1.07-.02-2.44-1.49-2.44-1.49 0-1.72 1.16-1.72 2.36v4.58h-3v-9h2.88v1.23h.04c.4-.75 1.37-1.54 2.82-1.54 3.02 0 3.58 1.99 3.58 4.58v4.73z"/>
+      </svg>
+    </a>
+  </div>
 </section>
 
 <footer>
